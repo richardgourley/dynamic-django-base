@@ -1,0 +1,15 @@
+{% extends 'basehtml/basesidebar.html' %}
+
+{% block content %}
+
+<h1>flatpages/template.html</h1>
+
+<h1>{{ object.page_title }}</h1>
+
+<!--- Marked safe to render HTML - only use 'safe' if YOU have entered the content in TinyMCE in django admin! ---->
+{{ object.page_content|safe }}
+
+{% endblock %}
+
+
+
