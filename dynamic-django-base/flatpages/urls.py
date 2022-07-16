@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import FlatPageDetailView, FlatPageCategory
+from .views import FlatPageDetailView
 
 app_name = 'flatpages'
 urlpatterns = [
