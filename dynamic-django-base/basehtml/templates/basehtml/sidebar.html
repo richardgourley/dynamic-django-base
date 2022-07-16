@@ -1,0 +1,18 @@
+{% load website_section_categories %}
+
+<h1>basehtml/sidebar.html</h1>
+
+<div style="background-color:lightblue; padding:12px;">
+<!--- Display all website section categories and their related website section urls ---->
+{% get_website_section_categories as website_section_categories %}
+{% for w in website_section_categories %}
+	<!--- Check if this website section category HAS website sections before displaying ---->
+	{% if w.websitesection_set.all %}
+	<h3>{{ w.section_category_title }}</h3>
+		{% for ws in w.websitesection_set.all %}
+			<a href="{{ ws.section_django_url }}">{{ ws.section_title }}</a><br>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+</div>
