@@ -26,9 +26,11 @@ Completely adpatable, the base project consists of:
 - Website Sections
 - Homepage
 
+## FEATURES
+
 For these demo images, I created two flat pages and three website sections that appear under two website categories:
 
-- Base HTML file with a sidebar:
+----
 
 ![Base Sidebar](https://github.com/richardgourley/dynamic-django-base/blob/main/base_html_sidebar.png)
 
@@ -64,7 +66,7 @@ WINDOWS: Scripts\activate
 pip install django
 ```
 
-- Install tinmyce-django
+- Install tinmyce-django - text editor for flat pages
 
 ```
 pip install django-tinymce
@@ -74,6 +76,12 @@ pip install django-tinymce
 
 ```
 pip install Pillow
+```
+
+- Install python-decouple
+
+```
+pip install python-decouple
 ```
 
 - Start django project (you can call it anything you prefer)
@@ -96,9 +104,19 @@ django-admin startapp websitesections
 python manage.py makemigrations
 python manage.py migrate
 ```
+- Setup a .env file in the same project level directory that contains 'manage.py'
+- Copy the secret key variable directly (without ' ') from the project 'settings.py' file like this...
 
-There are other django libraries and web development libraries worth looking at that I always use such as 
-- python decouple (for setting up a .env file to hide your secret key and production database variables)
+```
+.env file....
+
+SECRET_KEY=the_secret_key_number_in_settings.py
+DEBUG=True
+```
+- Look at how SECRET_KEY and DEBUG are hidden by python-decouple in the 'settings.py' file.
+- You can add any database names and passwords to your .env file in production.
+
+There are other django libraries available for working with Bootstrap... check out the docs for:
 - django-compressor (for Bootstrap)
 - django-libsass (for Bootstrap)
 
