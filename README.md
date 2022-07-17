@@ -34,6 +34,8 @@ For these demo images, I created two flat pages and three website sections that 
 
 https://github.com/richardgourley/dynamic-django-base/blob/main/base_html_fullwidth.png
 
+----
+
 - Base HTML full width page with a website sections grid:
 
 ![Base Full width](https://github.com/richardgourley/dynamic-django-base/blob/main/base_html_fullwidth.png)
