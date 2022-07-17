@@ -2,6 +2,7 @@
 
 ## INTRO
 This base project will save you time updating urls in numerous places. You can maintain site pages and django app information in one place - the admin!
+
 **A base starter project - pages and website sections can appear dynamically anywhere you like on your website:**
 
 **Created in the admin:**
