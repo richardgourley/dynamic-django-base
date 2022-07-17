@@ -30,7 +30,11 @@ For these demo images, I created two flat pages and three website sections that 
 
 - Base HTML file with a sidebar:
 
+![Base Sidebar](https://github.com/richardgourley/dynamic-django-base/blob/master/screenshots/base_html_sidebar.png)
+
 - Base HTML full width page with a website sections grid:
+
+![Base Full width](https://github.com/richardgourley/dynamic-django-base/blob/master/screenshots/base_html_fullwidth.png)
 
 ## GETTING STARTED
 
