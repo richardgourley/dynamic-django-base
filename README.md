@@ -1,7 +1,7 @@
 # Dynamic Django Base
 
 ## INTRO
-**A base starter project which allows you to create the following that can dynamically appear anywhere on your website:**
+**A base starter project - pages and website sections can appear dynamically anywhere you like on your website:**
 
 **Created in the admin:**
 - Flat Pages 
@@ -14,11 +14,11 @@
   - Appear under category headings in sidebar and footer.
 
 - When you create a new django app, you can add information about the app as a website section with text, image and url.
-- You can load the tags from the template tags to include website sections and categories anywhere you like in your project.
+- You can load the tags (from template tags) to include website sections and categories anywhere you like in your project.
 
 ## FEATURES
 
-Completely adpatable, the base project here consists of:
+Completely adpatable, the base project consists of:
 
 - Base HTML
 - Flat Pages
