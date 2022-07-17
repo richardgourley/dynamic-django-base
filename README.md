@@ -1,6 +1,7 @@
 # Dynamic Django Base
 
 ## INTRO
+This base project will save you time updating urls in numerous places. You can maintain site pages and django app information in one place - the admin!
 **A base starter project - pages and website sections can appear dynamically anywhere you like on your website:**
 
 **Created in the admin:**
@@ -33,6 +34,40 @@ For these demo images, I created two flat pages and three website sections that 
 ## GETTING STARTED
 
 - This project is development ready NOT production ready. (See docs for deploying a Django project)
+- All project and app files are included in the 'dynamicdjangobase' directory.
+- The 'dynamicdjangobase' directory will be created inside your virtual environment when you run django startapp.
 
+STEPS
+
+- Setup a directory where you will place the project.
+- In the Linux or Mac terminal or Windows terminal (Start -> Windows System -> Command Prompt) navigate to the directory.
+
+- Setup a virtual environment (presuming you have Python installed on your system)...
+
+- Activate the virtual environment - (dynamicdjangobase) must appear at the start of the line if activated correctly.
+
+- Install django
+
+```
+pip install django
+```
+
+- Install tinmyce-django
+
+```
+pip install django-tinymce
+```
+
+- Install pillow for images - Imaging Library adds image processing capabilities to your Python interpreter.
+
+```
+pip install Pillow
+```
+
+- Start django project
+
+```
+django
+```
 
 
