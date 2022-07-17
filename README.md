@@ -46,6 +46,11 @@ STEPS
 
 - Activate the virtual environment - (dynamicdjangobase) must appear at the start of the line if activated correctly.
 
+```
+LINUX/ MAC: source bin/activate
+WINDOWS: Scripts\activate
+```
+
 - Install django
 
 ```
@@ -64,10 +69,31 @@ pip install django-tinymce
 pip install Pillow
 ```
 
-- Start django project
+- Start django project (you can call it anything you prefer)
 
 ```
-django
+django-admin startproject dynamicdjangobase
 ```
+- Start all of the apps included in the project - app directories will be created automatically...
+
+```
+django-admin startapp basehtml
+django-admin startapp flatpages
+django-admin startapp homepage
+django-admin startapp websitesections
+```
+- When you have copied over all of the files from this repo to your app directories, migrate the changes to the database - (inserts tables for the models)
+- Make sure you are in the directory 'dynamicdjangobase' with the file 'manage.py' inside...
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+There are other django libraries and web development libraries worth looking at that I always use such as 
+- python decouple (for setting up a .env file to hide your secret key and production database variables)
+- django-compressor (for Bootstrap)
+- django-libsass (for Bootstrap)
+
 
 
