@@ -10,12 +10,9 @@ This base project will save you time updating urls in numerous places. You can m
   - Create pages such as 'about us'.
   - Dynamically appear in the navbar, sidebar and footer.
 - **Website sections** 
-  - Title, text, url and image of any django apps you create.
+  - Title, text, url and image of any django apps you create - usable anywhere on your website with by loading a template tag (see basehtml app).
   - Dynamically appear on the homepage as a grid and in navbar menu.
   - Dynamically appear under category headings in the sidebar and footer.
-
-- When you create a new django app, you can add information about the app as a website section with text, image and url.
-- You can load the tags (from template tags) to include website sections and categories anywhere you like in your project.
 
 ## FEATURES
 
@@ -36,8 +33,6 @@ For these demo images, I created two flat pages and three website sections that 
 
 ----
 
-- Base HTML full width page with a website sections grid:
-
 ![Base Full width](https://github.com/richardgourley/dynamic-django-base/blob/main/base_html_fullwidth.png)
 
 ## GETTING STARTED
@@ -46,7 +41,7 @@ For these demo images, I created two flat pages and three website sections that 
 - All project and app files are included in the 'dynamicdjangobase' directory.
 - The 'dynamicdjangobase' directory will be created inside your virtual environment when you run django startapp.
 
-STEPS
+**STEPS**
 
 - Setup a directory where you will place the project.
 - In the Linux or Mac terminal or Windows terminal (Start -> Windows System -> Command Prompt) navigate to the directory.
