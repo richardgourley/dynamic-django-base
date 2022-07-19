@@ -1,0 +1,50 @@
+{% load flatpages %}
+{% load website_section_categories %}
+{% load copyright_details %}
+
+<h1>basehtml/footer.html</h1>
+
+<div style="display:flex; flex-wrap:wrap;">
+	<div>
+		<ul>
+			<li><a href="{% url 'homepage:index' %}">Home</a></li>
+			{% get_flatpages as flatpages %}
+			<!--- Display all flatpages if they exist ---->
+			{% if flatpages %}
+				{% for page in flatpages %}
+					<li><a href="{% url 'flatpages:flatpage_detail' page.slug %}">{{ page.page_title }}</a></li>
+				{% endfor %}
+			{% endif %}
+		</ul>
+	</div>
+
+	<!--- Display all website section categories and their related website section urls ---->
+	{% get_website_section_categories as website_section_categories %}
+
+	{% for category in website_section_categories %}
+		<!--- Check if this website section category HAS website sections before displaying ---->
+		{% if category.websitesection_set.all %}
+		<div>
+			<h4>{{ category.section_category_title }}</h4>
+			<ul>
+				{% for section in category.websitesection_set.all %}
+					<li><a href="{{ section.section_django_url }}">{{ section.section_title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+	{% endfor %}
+
+</div>
+
+<!--- Copyright message ---->
+{% get_copyright_details as copyright_details %}
+
+<!--- Display copyright message dependant on if there is a start year or not ---->
+{% if copyright_details.start_year %}
+	<p>&copy {{ copyright_details.start_year }}-{% now 'Y' %} {{copyright_details.company_name}}</p>
+{% else %}
+	<p>&copy {% now 'Y' %} {{ copyright_details.company_name }}</p>
+{% endif %}
+
+

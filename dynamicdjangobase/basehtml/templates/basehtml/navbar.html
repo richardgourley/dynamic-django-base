@@ -1,0 +1,37 @@
+{% load flatpages %}
+{% load website_sections %}
+
+<h1>basehtml/navbar.html</h1>
+
+<!--- Navbar menu displaying homepage and any flatpages ---->
+<ul>
+	{% get_flatpages as flatpages %}
+	<div style="display:flex;">
+		<li>
+			<a style="padding-right:25px;" href="{% url 'homepage:index' %}">Home</a>
+		</li>
+		<!--- Display any flatpages urls ---->
+		{% if flatpages %}
+			{% for page in flatpages %}
+				<li>
+					<a style="padding-right:25px; "href="{% url 'flatpages:flatpage_detail' page.slug %}">{{ page.page_title }}</a>
+				</li>
+			{% endfor %}
+		{% endif %}
+	</div>
+</ul>
+
+<!--- Navbar menu displaying any website section urls ---->
+{% get_website_sections as website_sections %}
+<!--- Display any website section urls ---->
+{% if website_sections %}
+<ul>
+	<div style="display:flex;">
+	{% for section in website_sections %}
+		<li>
+			<a style="padding-right:25px;" href="{{ section.section_django_url }}">{{ section.section_title }}</a>
+		</li>
+	{% endfor %}
+	</div>
+</ul>
+{% endif %}

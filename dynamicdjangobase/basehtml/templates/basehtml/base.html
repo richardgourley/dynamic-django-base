@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+{% include 'basehtml/header.html' %}
+
+<body>
+
+    <h4>basehtml/base.html</h4>
+
+    {% include 'basehtml/navbar.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'basehtml/footer.html' %}
+
+</body>
+
+</html>

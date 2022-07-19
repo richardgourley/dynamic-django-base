@@ -1,0 +1,22 @@
+{% load website_section_categories %}
+
+<h1>basehtml/sidebar.html</h1>
+
+<div style="background-color:lightblue; padding:12px;">
+<!--- Display all website section categories and their related website section urls ---->
+{% get_website_section_categories as website_section_categories %}
+{% for category in website_section_categories %}
+	<!--- Check if this website section category HAS website sections before displaying ---->
+	{% if category.websitesection_set.all %}
+	<h3>{{ category.section_category_title }}</h3>
+		{% for section in category.websitesection_set.all %}
+			<!--- If this section has an image display the section image ---->
+			{% if section.section_image %}
+				<img style="max-width:150px;" src="{{ section.section_image.url }}"/><br>
+			{% endif %}
+			<a href="{{ section.section_django_url }}">{{ section.section_title }}</a><br>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+</div>
