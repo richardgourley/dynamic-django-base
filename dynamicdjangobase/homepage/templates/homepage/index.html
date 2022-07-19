@@ -1,0 +1,27 @@
+{% extends 'basehtml/base.html' %}
+
+{% block content %}
+
+<h1>homepage/index.html</h1>
+
+{% if website_sections %}
+<div style="display:flex; flex-wrap:wrap; justify-content:center;">
+	{% for w in website_sections %}
+		<div style="width:320px; background-color:lightblue; margin:15px;">
+			<div style="padding:15px;">
+				<h3>{{ w.section_title }}</h3>
+				<div>{{ w.section_main_text|linebreaks }}</div>
+				<a href="{{ w.section_django_url }}">Visit</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{% else %}
+	<h3>Website sections coming soon. Please check back later!</h3>
+{% endif %}
+
+
+{% endblock %}
+
+
+
