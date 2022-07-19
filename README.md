@@ -39,7 +39,9 @@ For these demo images, I created two flat pages and three website sections that 
 
 - This project is development ready NOT production ready. (See docs for deploying a Django project)
 - All project and app files are included in the 'dynamicdjangobase' directory.
-- The 'dynamicdjangobase' directory will be created inside your virtual environment when you run django startapp.
+- **NOTE: If you are new to Django, some of these files will be created automatically when you start a Django project.** This is normal.
+- **NOTE: Other directories will be created such as migrations (when you make changes to models) and pycache (caches python files).** Again this is expected.
+- The project directory 'dynamicdjangobase' will be created automatically inside your virtual environment when you run django startapp.
 
 **STEPS**
 
