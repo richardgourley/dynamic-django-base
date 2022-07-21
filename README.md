@@ -16,14 +16,21 @@ This base project will save you time updating urls in numerous places. You can m
 
 ## FEATURES
 
-Completely adpatable, the base project consists of:
+Completely adpatable, the base project consists of these :
 
-- Base HTML
-- Flat Pages
-- Website Sections
-- Homepage
+- **Base HTML**
+  - Includes template tags for displaying flat pages and website sections - you can load these template tags anywhere in your website design
+  - Also, a copyright_message template tag allows you to add optional start year and company name - automatically updates the copyright message in the footer!
+- **Flat Pages**
+  - Template for flat pages - customizable
+  - TinyMCE editor for any flat pages you create.
+- **Website Sections**
+  - Any urls you create for any custom apps you build can be added here and displayed anywhere you like.
+- **Homepage**
+  - Allows you to solely focus on building the homepage.
+  - Models in homepage can be used to import any models you like from other apps you create.
 
-## FEATURES
+## DEMO IMAGES
 
 For these demo images, I created two flat pages and three website sections that appear under two website categories:
 
